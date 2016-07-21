@@ -1,31 +1,39 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <html>
-<head></head>
+<head>
 
+<title>Shopping chart</title>
+</head>
 <body>
-	<h2> <center> Shopping Cart  </center> </h2>
-	<hr height='5' color="red">
 
-	<form name='f' action="j_spring_security_check" method='POST'>
+Please login with your credentials  <br>
 
+	${message}
+	<form:form action="../isValidUser" method="post">
 		<table>
 			<tr>
-				<td>User:</td>
-				<td><input type='text' name='j_username' value=''></td>
+				<td>User Name:</td>
+				<td><input type="text" name="name"></td>
 			</tr>
+
 			<tr>
 				<td>Password:</td>
-				<td><input type='password' name='j_password' /></td>
+				<td><input type="password" name="password" /></td>
 			</tr>
-			<!-- <tr>
-				<td>Remember Me:</td>
-				<td><input type="checkbox" name="_spring_security_remember_me" /></td>
-			</tr> -->
 			<tr>
-				<td><input name="submit" type="submit" value="submit" /></td>
+				<td><input type="submit" value="Login"></td>
 			</tr>
+
 		</table>
 
-	</form>
+
+
+	</form:form>
+
 
 </body>
 </html>
